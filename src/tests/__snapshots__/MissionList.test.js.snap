@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<table
+  className="table table-striped container table-hover mt-5 mb-5"
+>
+  <tbody>
+    <tr>
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+      <th
+        className="text-white"
+      >
+        .
+      </th>
+    </tr>
+  </tbody>
+</table>
+`;

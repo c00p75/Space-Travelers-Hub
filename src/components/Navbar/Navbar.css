@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #111;
+  --hovered-color: #f6701d;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Added nav css */
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Added nav img css */
+nav img {
+  width: 55px;
+}
+
+/* Added display, width, justify-content */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav ul li:last-child {
+  border-left: 1px solid black;
+}
+
+nav .active {
+  color: var(--hovered-color);
+}
+
+nav .active:hover::after {
+  width: 0 !important;
+}
+
+nav .active:hover ::before {
+  width: 0 !important;
+}
+
+.navLink {
+  position: relative;
+}
+
+.navLink::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.navLink::before {
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink:hover::before {
+  width: 100%;
+}

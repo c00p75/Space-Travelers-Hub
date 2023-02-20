@@ -1,0 +1,224 @@
+.reserveBtn {
+  --color: green;
+  --color2: white;
+
+  border-radius: 6px;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  color: white;
+  font-weight: 500;
+}
+
+.reserveBtn::after,
+.reserveBtn::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: var(--color);
+}
+
+.reserveBtn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.reserveBtn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.reserveBtn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.reserveBtn:hover {
+  color: var(--color2);
+  border-color: midnightblue;
+}
+
+.reserveBtn:active {
+  filter: brightness(0.7);
+  transform: scale(0.98);
+}
+
+.rocketLink {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  letter-spacing: 0.05em;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.rocketLink svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.rocketLink span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.rocketLink:hover svg {
+  transform: translateX(5px) rotate(90deg);
+  color: white;
+}
+
+.rocketLink:hover span {
+  transform: translateX(7px);
+  color: white;
+}
+
+.rocketContainer {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#rocketCarousel {
+  width: 40vw;
+}
+
+#rocketCarousel img {
+  height: 70vh;
+}
+
+.featureItems {
+  list-style: none;
+  font-weight: lighter;
+}
+
+.featureItems::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(255, 255, 255);
+  border-bottom-right-radius: 5px;
+}
+
+.featureItems::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgba(27, 1, 88, 0.5), rgba(24, 14, 66, 0.5));
+  border-radius: 10px;
+}
+
+.featureItems > li {
+  border-left: 5px solid turquoise;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  padding: 1em 1em;
+  margin: 1em 0.5em;
+  font-size: 1.2em;
+}
+
+.featureItems > :first-child,
+.featureItems > :last-child {
+  margin: 0.2em 0.5em !important;
+}
+
+.featureItems > :last-child {
+  border: none;
+  box-shadow: none;
+}
+
+.featureItems > li > :first-child {
+  font-weight: normal !important;
+}
+
+.feature {
+  display: flex;
+  gap: 10px;
+}
+
+.featureItems > li > div {
+  margin-left: 2em;
+  padding-left: 1em;
+  border-left: 5px solid goldenrod;
+  font-weight: lighter;
+}
+
+.featureContainer h3 {
+  font-size: 1em;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 17%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: black;
+  border-radius: 50%;
+  background-size: 100% 80%;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta:hover::before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
