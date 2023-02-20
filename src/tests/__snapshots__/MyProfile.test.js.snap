@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-evenly"
+  >
+    <div
+      className="col-6"
+    >
+      <h1
+        className="p-2"
+      >
+        My Missions
+      </h1>
+      <div>
+        No Missions Joined
+      </div>
+      <div />
+    </div>
+    <div
+      className="col-6"
+    >
+      <h1
+        className="p-2"
+      >
+        My Rockets
+      </h1>
+      <div>
+        No Rockets Reserved
+      </div>
+      <div />
+    </div>
+    <div
+      className="col-6 mt-5"
+    >
+      <h1
+        className="p-2"
+      >
+        My Dragons
+      </h1>
+      <div>
+        No Dragons Booked
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;

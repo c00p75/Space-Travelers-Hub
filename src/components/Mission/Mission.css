@@ -1,0 +1,17 @@
+.not-member {
+  background-color: #6c757d !important;
+  color: white;
+  padding: 4px 8px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.member {
+  background-color: #5bc0de !important;
+  color: white;
+  padding: 4px 8px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
