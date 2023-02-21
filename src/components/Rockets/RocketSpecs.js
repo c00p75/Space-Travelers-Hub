@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Carousel from 'react-bootstrap/Carousel';
 import { fetchRockets } from '../../redux/rockets/rockets';
 import './Rockets.css';

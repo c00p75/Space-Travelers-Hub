@@ -6,7 +6,7 @@ const Mission = ({
 }) => (
   <tr>
     <td className="col-md-1">{missionName}</td>
-    <td className="col-md-4">{description}</td>
+    <td className="col-md-4 description">{description}</td>
     <td className="align-middle col-md-1 text-center">
       <span className={joined ? 'member' : 'not-member '}>
         {joined ? 'Active Member' : 'NOT A MEMBER'}

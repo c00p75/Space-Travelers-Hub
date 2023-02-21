@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import planet from '../../assets/planet.png';
 import './Navbar.css';
 
@@ -30,11 +30,14 @@ const Navbar = () => {
   return (
     <header>
       <nav className="container-fluid py-3 px-5 mb-5" style={{ boxShadow: '1px 1px whitesmoke' }}>
-        <h1>
-          <img src={planet} alt="Logo" />
-          {' '}
-          Space Travelers&apos; hub
-        </h1>
+        <Link to="/">
+          <h1>
+            <img src={planet} alt="Logo" />
+            {' '}
+            Space Travelers&apos; Hub
+          </h1>
+        </Link>
+
         <ul className="conatiner d-flex align-items-center m-0">
           {links.map((link) => (
             <li key={link.id}>

@@ -21,20 +21,11 @@ export const dragonsReducer = (state = { status: 'default', dragons: [] }, actio
 
 export const fetchDragons = createAsyncThunk(
   ALL_DRAGONS, async () => {
-    const data = [];
+    let data = [];
     await fetch('https://api.spacexdata.com/v3/dragons')
       .then((res) => res.json())
       .then((json) => {
-        json.forEach((i) => {
-          data.push({
-            id: i.id,
-            name: i.name,
-            type: i.type,
-            flickr_images: i.flickr_images,
-            description: i.description,
-            reserved: false,
-          });
-        });
+        data = [...json];
       });
     return data;
   },
