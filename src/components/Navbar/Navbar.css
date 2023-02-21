@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
 :root {
   --primary-color: #111;
   --hovered-color: #f6701d;
@@ -44,6 +46,11 @@ nav .active:hover::after {
 
 nav .active:hover ::before {
   width: 0 !important;
+}
+
+nav h1 {
+  font-family: 'Teko', sans-serif !important;
+  font-weight: 500;
 }
 
 .navLink {

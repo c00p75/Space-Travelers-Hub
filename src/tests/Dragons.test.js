@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import Dragons from '../components/Dragons';
+import Dragons from '../components/Dragons/Dragons';
 import store from '../redux/configureStore';
 
 it('matches snapshot', () => {

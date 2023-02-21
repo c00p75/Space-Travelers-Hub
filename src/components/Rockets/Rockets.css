@@ -43,7 +43,7 @@
 
 .reserveBtn:hover {
   color: var(--color2);
-  border-color: midnightblue;
+  border-color: var(--color);
 }
 
 .reserveBtn:active {
