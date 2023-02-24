@@ -121,12 +121,16 @@
   align-items: center;
 }
 
+.rocketContainer img {
+  width: 250px;
+  height: 200px;
+}
+
 #rocketCarousel {
   width: 40vw;
 }
 
 #rocketCarousel img {
-  width: 250px;
   height: 70vh;
 }
 
@@ -186,7 +190,6 @@
 .featureContainer button {
   display: flex;
   align-items: center;
-  height: 35px;
 }
 
 .featureContainer h3 {
@@ -229,13 +232,17 @@
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .rocketContainer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 
-  #rocketCarousel img {
+  .rocketContainer img {
     width: 100%;
+    height: 100%;
+  }
+
+  #rocketCarousel img {
     height: 45vh;
   }
 
@@ -265,7 +272,7 @@
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .reserveBtn:hover::before {
     transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
   }
