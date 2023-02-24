@@ -54,7 +54,7 @@ const MissionsList = () => {
                       <span className={`member-status ${obj.joined ? 'member' : 'not-member '}`}>{obj.joined ? 'Active Member' : 'NOT A MEMBER'}</span>
                     </div>
                   </Accordion.Header>
-                  <Accordion.Body className="d-flex flex-column gap-4">
+                  <Accordion.Body className="d-flex flex-column gap-4 align-items-sm-center">
                     <div style={{ textAlign: 'justify' }}>{obj.description}</div>
                     <button type="button" className={obj.joined ? 'leave-btn' : 'join-btn'} onClick={() => dispatch(joinMission(obj))}>
                       {obj.joined ? 'Leave Mission' : 'Join Mission'}

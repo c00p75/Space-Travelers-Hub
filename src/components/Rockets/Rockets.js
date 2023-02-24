@@ -17,7 +17,7 @@ const Rockets = () => {
   return (
     <ul className="rocketList container d-flex flex-column gap-4">
       {allRockets.map((rocket) => (
-        <li key={rocket.id} className="rocketContainer d-flex flex-column flex-sm-row p-3">
+        <li key={rocket.id} className="rocketContainer d-flex flex-column flex-md-row p-3">
           <div className="px-md-4">
             <img src={rocket.flickr_images[0]} alt="rocket" className="p-0" />
           </div>

@@ -13,7 +13,6 @@ a:hover {
   color: var(--primary-color);
 }
 
-/* Added nav css */
 nav {
   display: flex;
   width: 100%;
@@ -21,12 +20,10 @@ nav {
   box-shadow: whitesmoke 1px 1px;
 }
 
-/* Added nav img css */
 nav img {
   width: 55px;
 }
 
-/* Added display, width, justify-content */
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -120,7 +117,10 @@ nav h1 {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    width: 110px;
+  }
+
+  .nav-item:has(span) {
+    padding-left: 1em;
   }
 
   .nav-item span {
