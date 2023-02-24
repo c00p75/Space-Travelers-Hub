@@ -232,7 +232,18 @@
   transition: all 0.3s ease;
 }
 
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  #rocketCarousel {
+    padding: 0 25%;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  nav:has(.show) {
+    transition: 0.5s ease;
+    background-color: gainsboro;
+  }
+
   .rocketContainer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
@@ -243,7 +254,8 @@
   }
 
   #rocketCarousel img {
-    height: 45vh;
+    height: 50vh;
+    width: auto;
   }
 
   .rocketDescription {

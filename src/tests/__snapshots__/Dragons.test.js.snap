@@ -2,6 +2,6 @@
 
 exports[`matches snapshot 1`] = `
 <ul
-  className="container"
+  className="rocketList container"
 />
 `;

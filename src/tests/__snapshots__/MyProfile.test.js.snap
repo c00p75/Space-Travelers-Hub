@@ -2,49 +2,48 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="container"
+  className="container-fluid"
 >
   <div
-    className="row justify-content-evenly"
+    className="justify-content-between d-flex gap-5 gap-md-1 flex-column flex-md-row"
   >
     <div
-      className="col-6"
+      className="col-md-4"
     >
       <h1
-        className="p-2"
+        className="p-2 bg-info"
       >
         My Missions
       </h1>
-      <div>
+      <div
+        className="summary"
+      >
         No Missions Joined
       </div>
-      <div />
     </div>
     <div
-      className="col-6"
+      className="col-md-4"
     >
       <h1
-        className="p-2"
+        className="p-2 bg-info"
       >
         My Rockets
       </h1>
       <div>
         No Rockets Reserved
       </div>
-      <div />
     </div>
     <div
-      className="col-6 mt-5"
+      className="col-md-4"
     >
       <h1
-        className="p-2"
+        className="p-2 bg-info"
       >
         My Dragons
       </h1>
       <div>
         No Dragons Booked
       </div>
-      <div />
     </div>
   </div>
 </div>
