@@ -33,7 +33,7 @@ const RocketSpecs = () => {
             <div className="featureContainer overflow-auto col ps-4" style={{ width: '100%' }}>
               <div className="d-flex gap-4 align-items-center">
                 <h2>{`${rocket.rocket_name} Rocket Features`}</h2>
-                <button type="button" className={!rocket.reserved ? 'btn btn-primary reserveBtn2' : 'btn btn-outline-secondary'} onClick={() => handleClick(rocket.id)}>
+                <button type="button" className={`btn me-3 ${!rocket.reserved ? 'btn-primary reserveBtn2' : 'btn-outline-secondary'}`} onClick={() => handleClick(rocket.id)}>
                   <span>
                     {rocket.reserved && 'Cancel Reservation'}
                     {!rocket.reserved && 'Reserve Rocket'}
