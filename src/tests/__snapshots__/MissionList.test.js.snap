@@ -1,26 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot 1`] = `
-<table
-  className="table table-striped container table-hover mt-5 mb-5"
->
-  <tbody>
-    <tr>
-      <th>
-        Mission
-      </th>
-      <th>
-        Description
-      </th>
-      <th>
-        Status
-      </th>
-      <th
-        className="text-white"
-      >
-        .
-      </th>
-    </tr>
-  </tbody>
-</table>
+Array [
+  <div
+    className="container-fluid d-none d-md-block"
+  >
+    <table
+      className="table table-striped container border mt-5 mb-5"
+    >
+      <tbody>
+        <tr>
+          <th>
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Status
+          </th>
+          <th
+            className="text-white"
+          >
+             
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+  <div
+    className="d-md-none"
+  >
+    <h1
+      className="text-center"
+    >
+      Missions
+    </h1>
+    <div
+      className="d-flex flex-column gap-4"
+    />
+  </div>,
+]
 `;

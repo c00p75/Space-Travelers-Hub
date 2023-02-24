@@ -121,6 +121,9 @@ nav h1 {
 
   .nav-item:has(span) {
     padding-left: 1em;
+    max-width: 200px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .nav-item span {
