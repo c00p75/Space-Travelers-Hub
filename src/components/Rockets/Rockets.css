@@ -233,8 +233,8 @@
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-  #rocketCarousel {
-    padding: 0 25%;
+  #rocketCarousel img {
+    height: auto !important;
   }
 }
 
