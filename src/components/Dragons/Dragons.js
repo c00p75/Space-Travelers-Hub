@@ -14,13 +14,13 @@ const Dragons = () => {
 
   const handleClick = (id) => { dispatch(booking(id)); };
   return (
-    <ul className="container">
+    <ul className="rocketList container">
       {dragons.map((dragon) => (
-        <li key={dragon.id} className="d-flex p-3">
-          <div className="px-4">
-            <img src={dragon.flickr_images[0]} alt="dragon" style={{ width: '250px', height: '200px' }} className="p-0" />
+        <li key={dragon.id} className="rocketContainer d-flex flex-column flex-md-row p-3">
+          <div className="px-md-4">
+            <img src={dragon.flickr_images[0]} alt="dragon" className="p-0" />
           </div>
-          <div>
+          <div className="rocketDescription">
             <h2 style={{ fontSize: '1.51em' }}>
               {' '}
               <NavLink to={`/dragons/${dragon.id}`} className="rocketLink">

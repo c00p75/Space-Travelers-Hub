@@ -13,3 +13,9 @@
   background: gray;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 576px) {
+  .summary {
+    max-height: 100%;
+  }
+}

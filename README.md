@@ -30,16 +30,11 @@
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Programming languages</summary>
   <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
     <li><a href="https://www.javascript.com/">JavaScript</a></li>
-    <li><a href="https://reactjs.org/">React</a></li>
-    <li><a href="https://redux.js.org/">Redux</a></li>
   </ul>
  </details>
  
@@ -56,6 +51,14 @@
   <summary>Frameworks</summary>
   <ul>
     <li><a href="https://getbootstrap.com/">Bootstrap 5</a></li>
+    <li><a href="https://react-bootstrap.github.io/">React Bootstrap</a></li>
+  </ul>
+ </details>
+ <details>
+  <summary>Libraries</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
   </ul>
  </details>
 <details>
@@ -68,11 +71,14 @@
 
 <details>
 <summary>Database</summary>
+<ul>
+    <li><a href="'https://api.spacexdata.com/v3">Space X</a></li>
+  </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
-- SPA has 4 pages
+- SPA has 4 main pages as well as rocket and dragon details pages.
 - The user can reserve a rocket and cancel the reservation
 - The user can join a mission and leave the mission
 - The user can book a dragon and cancel the booking
@@ -82,7 +88,7 @@
 
 ## Deployment Link:
 
-[space-travelers-hub.com](https://enchanting-mousse-dd4b6f.netlify.app/)
+[space-travelers-hub](https://space-travelers-hub-7yjv.onrender.com/)
 
 ## 💻 Getting Started with Create React App <a name="getting-started"></a>
 
@@ -101,7 +107,7 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 - `cd my-folder`
-- `git clone https://github.com/haliljon/Space-travelers`
+- `git clone https://github.com/c00p75/Space-Travelers-Hub.git`
 
 ### Install
 
@@ -136,12 +142,6 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## 👥 Authors <a name="author"></a>
-
-👤 **Haliljon Juraboev**
-
-- GitHub: [@githubhaliljon](https://github.com/haliljon)
-- Twitter: [@twitterhaliljon1](https://twitter.com/haliljon1)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/juraboev-haliljon)
 
 👤 **George M'sapenda**
 
@@ -178,7 +178,13 @@ Please consider giving a ⭐️ if you like this project!
 
 > Give credit to everyone who inspired your codebase.
 
-We would like to thank [Microverse](https://www.microverse.org/)
+I would like to thank [Microverse](https://www.microverse.org/) for providing this project in their curriculum.
+
+I also thank 👤 **Haliljon Juraboev** for his contribution in the first version of this project.
+- GitHub: [@githubhaliljon](https://github.com/haliljon)
+- Twitter: [@twitterhaliljon1](https://twitter.com/haliljon1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/juraboev-haliljon)
+
 
 P.S. stackoverflow and google 😉
 

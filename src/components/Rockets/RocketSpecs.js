@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-import { fetchRockets } from '../../redux/rockets/rockets';
+import { fetchRockets, reservation } from '../../redux/rockets/rockets';
 import './Rockets.css';
 
 const RocketSpecs = () => {
@@ -17,24 +17,30 @@ const RocketSpecs = () => {
   const rocketData = allRockets.filter((i) => i.rocket_id === id);
   const rocket = rocketData[0];
 
+  const handleClick = (id) => { dispatch(reservation(id)); };
   return (
     <>
       {rocketData.length && (
         <div className="container-fluid" style={{ marginTop: '-20px' }}>
-          <div className="row">
-            <span className="col-6">{' '}</span>
-            <h2 className="col-6">{`${rocket.rocket_name} Rocket Features`}</h2>
-          </div>
-          <div className="col d-flex" style={{ width: '100%' }}>
-            <Carousel id="rocketCarousel" interval={null}>
+          <div className="col d-flex flex-column flex-md-row" style={{ width: '100%' }}>
+            <Carousel id="rocketCarousel" interval={null} className="d-flex align-items-center">
               {rocket.flickr_images.map((img) => (
                 <Carousel.Item key={img}>
                   <img className="d-block w-100" src={img} alt="Rocket Slide" />
                 </Carousel.Item>
               ))}
             </Carousel>
-            <div className="featureContainer col ps-4" style={{ width: '100%' }}>
-              <ul className="featureItems overflow-auto" style={{ height: '65vh' }}>
+            <div className="featureContainer overflow-auto col ps-4" style={{ width: '100%' }}>
+              <div className="d-flex gap-4 align-items-center">
+                <h2>{`${rocket.rocket_name} Rocket Features`}</h2>
+                <button type="button" className={!rocket.reserved ? 'btn btn-primary reserveBtn2' : 'btn btn-outline-secondary'} onClick={() => handleClick(rocket.id)}>
+                  <span>
+                    {rocket.reserved && 'Cancel Reservation'}
+                    {!rocket.reserved && 'Reserve Rocket'}
+                  </span>
+                </button>
+              </div>
+              <ul className="featureItems">
                 <li className="feature">
                   <span>Company</span>
                   <span>:</span>
