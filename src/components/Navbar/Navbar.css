@@ -18,6 +18,7 @@ nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  box-shadow: whitesmoke 1px 1px;
 }
 
 /* Added nav img css */
@@ -51,10 +52,16 @@ nav .active:hover ::before {
 nav h1 {
   font-family: 'Teko', sans-serif !important;
   font-weight: 500;
+  text-shadow: 0 0 cadetblue;
+}
+
+#collapsibleNavId {
+  flex-grow: 0;
 }
 
 .navLink {
   position: relative;
+  margin: 0 1rem;
 }
 
 .navLink::after {
@@ -82,4 +89,41 @@ nav h1 {
 
 .navLink:hover::before {
   width: 100%;
+}
+
+.nav-item {
+  align-items: baseline;
+}
+
+.nav-item:has(span) {
+  margin-right: 0 !important;
+}
+
+.nav-item:has(span) .navLink {
+  margin-right: 0 !important;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul li:last-child {
+    border: none;
+  }
+
+  .navbar-nav {
+    min-height: 30vh;
+  }
+
+  .nav-item {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 110px;
+  }
+
+  .nav-item span {
+    margin-right: 1rem !important;
+  }
 }

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Carousel from 'react-bootstrap/Carousel';
 import '../Rockets/Rockets.css';
-import { fetchDragons } from '../../redux/dragons.js/dragons';
+import { booking, fetchDragons } from '../../redux/dragons.js/dragons';
 
 const DragonSpecs = () => {
   const { id } = useParams(); // useParams enables us no grab parameters from the route
@@ -18,25 +18,31 @@ const DragonSpecs = () => {
 
   const dragonData = dragons.filter((i) => i.id === id);
   const dragon = dragonData;
+  const handleClick = (id) => { dispatch(booking(id)); };
 
   return (
     <>
       {dragonData.length && (
         <div className="container-fluid" style={{ marginTop: '-20px' }}>
-          <div className="row">
-            <span className="col-6">{' '}</span>
-            <h2 className="col-6">{`${dragon[0].name} Rocket Features`}</h2>
-          </div>
-          <div className="col d-flex" style={{ width: '100%' }}>
-            <Carousel id="rocketCarousel" interval={null}>
+          <div className="col d-flex flex-column flex-md-row" style={{ width: '100%' }}>
+            <Carousel id="rocketCarousel" interval={null} className="d-flex align-items-center">
               {dragon[0].flickr_images.map((img) => (
                 <Carousel.Item key={img}>
                   <img className="d-block w-100" src={img} alt="Rocket Slide" />
                 </Carousel.Item>
               ))}
             </Carousel>
-            <div className="featureContainer col ps-4" style={{ width: '100%' }}>
-              <ul className="featureItems overflow-auto" style={{ height: '65vh' }}>
+            <div className="featureContainer overflow-auto col ps-4" style={{ width: '100%' }}>
+              <div className="d-flex gap-4 align-items-center">
+                <h2>{`${dragon[0].name} Rocket Features`}</h2>
+                <button type="button" className={!dragon[0].booked ? 'btn btn-primary reserveBtn2' : 'btn btn-outline-secondary'} onClick={() => handleClick(dragon[0].id)}>
+                  <span>
+                    {dragon[0].booked && 'Cancel Booking'}
+                    {!dragon[0].booked && 'Book Dragon'}
+                  </span>
+                </button>
+              </div>
+              <ul className="featureItems">
                 <li className="feature">
                   <span>Crew Capacity</span>
                   <span>:</span>

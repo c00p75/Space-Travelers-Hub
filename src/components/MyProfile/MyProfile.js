@@ -17,8 +17,8 @@ const MyProfile = () => {
   const myDragons = dragons.filter((dragon) => dragon.booked === true);
   return (
     <div className="container-fluid">
-      <div className="row justify-content-evenly">
-        <div className="col-4">
+      <div className="justify-content-between d-flex gap-5 gap-md-1 flex-column flex-md-row">
+        <div className="col-md-4">
           <h1 className="p-2 bg-info">My Missions</h1>
           <div className="summary">
             {!myMissions.length ? 'No Missions Joined' : ' '}
@@ -38,7 +38,7 @@ const MyProfile = () => {
             ))}
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-md-4">
           <h1 className="p-2 bg-info">My Rockets</h1>
           <div>
             {!myRockets.length ? 'No Rockets Reserved' : ' '}
@@ -54,7 +54,7 @@ const MyProfile = () => {
             ))}
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-md-4">
           <h1 className="p-2 bg-info">My Dragons</h1>
           <div>
             {!myDragons.length ? 'No Dragons Booked' : ' '}

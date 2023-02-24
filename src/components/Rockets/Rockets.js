@@ -15,13 +15,13 @@ const Rockets = () => {
   const handleClick = (id) => { dispatch(reservation(id)); };
 
   return (
-    <ul className="container d-flex flex-column gap-4">
+    <ul className="rocketList container d-flex flex-column gap-4">
       {allRockets.map((rocket) => (
-        <li key={rocket.id} className="rocketContainer d-flex p-3">
-          <div className="px-4">
-            <img src={rocket.flickr_images[0]} alt="rocket" style={{ width: '250px', height: '200px' }} className="p-0" />
+        <li key={rocket.id} className="rocketContainer d-flex flex-column flex-sm-row p-3">
+          <div className="px-md-4">
+            <img src={rocket.flickr_images[0]} alt="rocket" className="p-0" />
           </div>
-          <div>
+          <div className="rocketDescription">
             <h2 style={{ fontSize: '1.5em' }}>
               {' '}
               <NavLink to={`/rockets/${rocket.rocket_id}`} className="rocketLink">
