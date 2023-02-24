@@ -241,7 +241,7 @@
 @media screen and (max-width: 768px) {
   nav:has(.show) {
     transition: 0.5s ease;
-    background-color: gainsboro;
+    background-color: aliceblue;
   }
 
   .rocketContainer {
