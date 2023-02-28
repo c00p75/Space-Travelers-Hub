@@ -32,6 +32,7 @@ nav ul {
 
 nav ul li:last-child {
   border-left: 1px solid black;
+  padding-right: 0.5em;
 }
 
 nav .active {
@@ -104,9 +105,17 @@ nav h1 {
   cursor: pointer;
 }
 
+.rounded-pill {
+  position: absolute !important;
+  left: 100%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 768px) {
   nav ul li:last-child {
     border: none;
+    margin-left: 1em;
   }
 
   .navbar-nav {
@@ -117,10 +126,11 @@ nav h1 {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+    padding-left: 0;
   }
 
-  .nav-item:has(span) {
-    padding-left: 1em;
+  .nav-item:has(.dropdown-toggle) {
+    padding-left: 0.9em;
     max-width: 200px;
     justify-content: center;
     flex-wrap: wrap;
@@ -128,5 +138,19 @@ nav h1 {
 
   .nav-item span {
     margin-right: 1rem !important;
+  }
+
+  nav ul li:last-child span {
+    position: relative;
+  }
+
+  .rounded-pill {
+    position: relative !important;
+    left: 0.5em;
+    transform: translate(0, 0);
+  }
+
+  .nav-item:has(.d-none) {
+    margin: 0;
   }
 }

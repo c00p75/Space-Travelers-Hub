@@ -7,6 +7,7 @@ import { fetchRockets } from '../../redux/rockets/rockets';
 import planet from '../../assets/planet.png';
 import './Navbar.css';
 import { fetchDragons } from '../../redux/dragons.js/dragons';
+import { displayMissions } from '../../redux/missions/missions';
 
 const Navbar = () => {
   const links = [
@@ -23,14 +24,28 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const allRockets = useSelector((state) => state.rockets);
   const { status, dragons } = useSelector((state) => state.dragons);
+  const missionsStore = useSelector((state) => state.missions);
+  const { status2, missions } = missionsStore;
+
+  // Variable to store count of reserved, booked and joined rockets, dragons, and missions.
+  let selected = 0;
+
   useEffect(() => {
     if (!allRockets.length) { dispatch(fetchRockets()); }
     if (status === 'default') { dispatch(fetchDragons()); }
+    if (status2 === 'initial') { dispatch(displayMissions()); }
   });
+
+  // Condition to updated selected count only if data has been retrieved from the api
+  if (allRockets.length && status !== 'default' && status2 !== 'initial') {
+    allRockets.forEach((i) => { if (i.reserved === true) { selected += 1; } });
+    dragons.forEach((i) => { if (i.booked === true) { selected += 1; } });
+    missions.forEach((i) => { if (i.joined === true) { selected += 1; } });
+  }
 
   return (
     <header className="position-sticky">
-      <nav className="navbar navbar-expand-md navbar-light mb-4">
+      <nav className="container-md-fluid navbar navbar-expand-md navbar-light mb-4 px-md-2">
         <div className="container-fluid">
           <Link to="/">
             <h1>
@@ -51,9 +66,9 @@ const Navbar = () => {
             <RiMenu5Fill style={{ height: '1.5em', width: '1.5em', marginTop: '-15px' }} />
           </button>
           <div className="collapse navbar-collapse" id="collapsibleNavId">
-            <ul className="navbar-nav me-auto conatiner d-flex align-items-center m-0">
+            <ul className="navbar-nav me-auto conatiner d-flex align-items-center m-0 px-md-4">
               {links.map((link) => (
-                <li key={link.id} className={`nav-item ${link.text === 'Rockets' || link.text === 'Dragons' ? 'dropdown d-flex' : ''}`}>
+                <li key={link.id} className={`nav-item position-relative ${link.text === 'Rockets' || link.text === 'Dragons' ? 'dropdown d-flex' : ''}`}>
                   <NavLink to={link.path} className="navLink" onClick={navCollapse}>{link.text}</NavLink>
                   {link.text === 'Rockets' && (
                   <>
@@ -74,6 +89,11 @@ const Navbar = () => {
                       ))}
                     </div>
                   </>
+                  )}
+                  {link.text === 'My Profile' && (
+                    <span className={`${selected !== 0 ? 'badge rounded-pill bg-primary' : 'd-none'}`}>
+                      {selected}
+                    </span>
                   )}
                 </li>
               ))}

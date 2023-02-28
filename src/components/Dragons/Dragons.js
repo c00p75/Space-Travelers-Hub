@@ -14,7 +14,7 @@ const Dragons = () => {
 
   const handleClick = (id) => { dispatch(booking(id)); };
   return (
-    <ul className="rocketList container">
+    <ul className="rocketList container d-flex flex-column gap-4">
       {dragons.map((dragon) => (
         <li key={dragon.id} className="rocketContainer d-flex flex-column flex-md-row p-3">
           <div className="px-md-4">
